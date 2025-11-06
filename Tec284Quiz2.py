@@ -10,7 +10,7 @@ blue_button = Button(22)
 
 rgb_led = RGBLED(red=23, green=24, blue=25)
 
-# define function
+#define function
 
 def check_buttons():
 
@@ -58,9 +58,7 @@ def check_buttons():
     else:
         rgb_led.color = (0, 0, 0) #This is for no buttons pressed = no color
 
-
 #Loop
     while True:
         check_buttons()
-
     sleep(0.1)
