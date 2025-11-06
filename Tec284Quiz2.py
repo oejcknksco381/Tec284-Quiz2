@@ -3,15 +3,13 @@ from time import sleep
 
 
 # Setting up the gpio pins 17, 27 and 22
-
 red_button = Button(17)
-green_button = Button(27)
 blue_button = Button(22)
+green_button = Button(27)
 
 rgb_led = RGBLED(red=23, green=24, blue=25)
 
 #define function
-
 def check_buttons():
 
     red = red_button.is_pressed
@@ -19,7 +17,6 @@ def check_buttons():
     blue = blue_button.is_pressed
 
 #if/else statements for if the buttons are pressed for its combinations
-
     if red and not green and not blue:
 
         print("Red")
@@ -56,7 +53,7 @@ def check_buttons():
         rgb_led.color = (1, 1, 1)  
 
     else:
-        rgb_led.color = (0, 0, 0) #This is for no buttons pressed = no color
+        rgb_led.color = (0, 0, 0) #no buttons pressed = no color
 
 #Loop
     while True:
