@@ -55,7 +55,7 @@ def check_buttons():
     else:
         rgb_led.color = (0, 0, 0) #no buttons pressed = no color
 
-#Loop
+#program control and delay for stability
     while True:
         check_buttons()
     sleep(0.1)
